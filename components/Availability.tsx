@@ -2,9 +2,11 @@ import { CalendarClock, ArrowUpRight } from "lucide-react";
 import { Container, Eyebrow, Section } from "./ui";
 import { Reveal } from "./Reveal";
 import { BookingEmbed } from "./BookingEmbed";
+import { CalEmbed } from "./CalEmbed";
 import { availability } from "@/lib/content";
 
 export function Availability() {
+  const calLink = process.env.NEXT_PUBLIC_CAL_LINK?.trim();
   const raw = process.env.NEXT_PUBLIC_BOOKING_URL?.trim();
   // Only Google's appointment-schedule URL (…/appointments/schedules/…?gv=true) is
   // iframe-embeddable. Short share links (calendar.app.google/…) refuse to frame,
@@ -42,7 +44,11 @@ export function Availability() {
 
           <Reveal delay={0.1}>
             <div className="glass glow-cyan rounded-3xl p-3">
-              {isEmbeddable ? (
+              {calLink ? (
+                <div className="h-[620px] overflow-hidden rounded-2xl">
+                  <CalEmbed calLink={calLink} />
+                </div>
+              ) : isEmbeddable ? (
                 <BookingEmbed src={embedUrl!} />
               ) : raw ? (
                 <div className="flex h-[420px] flex-col items-center justify-center gap-5 rounded-2xl border border-line-bright/70 bg-void/40 px-6 text-center">

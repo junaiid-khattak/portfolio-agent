@@ -1,0 +1,401 @@
+=== PDF page 1 ===
+PORTFOLIO
+In Doing We Believe
+Full-Stack software development for medium-large
+scale startups and businesses from scratch
+
+=== PDF page 2 ===
+PORTFOLIO
+Page01/06
+07/07
+08/08
+Fitness
+Bookings
+14/16 E-commerce
+Non-Profit
+Safety
+09/10
+11/11
+20/22
+12/13
+Manangement
+Jobsearch and EdTech
+17/19
+Healthcare
+Online Communities
+
+=== PDF page 3 ===
+PORTFOLIO
+
+=== PDF page 4 ===
+PORTFOLIO
+Main feature list
+Rock Climbing Coaching App
+01/01
+Revolutionary Rock Climbing Coaching App;
+meticulously crafted for intermediate climbers.
+Training System Mental Exercises Tutorials & Events
+Tracking & Analytics Real-Time Feedback Subscription Model
+Research, UI/UX Design, Mobile App, Web App
+Zach Fletcher, USA
+2023-2024
+https://www.figma.com/file/7tSDhA0hGSYlSp79cGKU1m/MindBody-Climb?type=design&node-id=34-55&mode=design&t=rWtbqPK3Sg2OlluH-0
+
+=== PDF page 5 ===
+Main feature list
+Connecting Gym-Goers
+Connects users to find workout partners, share
+their physical activities, and communicate through
+live chat.
+Connects Workout Partners Fitness Event Calendar
+Personalised Fitness Plans Achievement Badges
+Physical Activity Sharing
+PORTFOLIO
+02/02
+Research, UI/UX Design, Mobile App
+Micah Cunningham, USA
+2022
+https://www.figma.com/file/Zfap6HD0TbpCDHXpXBvpJz/Natyfit?node-id=0%3A1
+
+=== PDF page 6 ===
+PORTFOLIO
+03/03
+Main feature list
+Fitness Companion
+Fitness companion, combining workout tracking,
+progress monitoring, and meal planning in a single,
+intuitive app
+Workout Tracking & Monitoring
+Integration with Fitness Wearables
+Meal Planning & Tracking
+Personalised Fitness Plans
+Community Forums
+Calorie Counter
+Research, UI/UX Design, Mobile App, Web App
+Zach Fletcher, USA
+2023-2024
+https://www.figma.com/file/OsUpdxxord0FQcLmO5O2WE/Fit-flow-app?node-id=0%3A1&t=oKJjJCqrATUUizQo-1
+
+=== PDF page 7 ===
+PORTFOLIO
+04/04
+Main feature list
+Gym Management
+Schedy combines the functions of a gym management
+system and a social media platform for the fitness industry
+Business Management
+Member Management Reporting & Analytics
+Staff Management Billing & Invoicing
+Research, UI/UX Design, Mobile App, and Web App
+Sokol Petro, Italy
+2022/July
+https://www.figma.com/proto/ckGHxCHPIQf6K6QkHISY4x/GYM-BOOK?node-id=1%3A1866&scaling=scale-down&page-id=1%3A1702&starting-point-node-id=1%3A1866
+
+=== PDF page 8 ===
+PORTFOLIO
+05/05
+Main feature list
+Connecting Athletes/Coaches/Sponsors
+OffSzn is a social network that connects athletes,
+athletic programs, and collegiate coaches with
+sponsors and businesses.
+Sports Event Calendar
+Social Network Athletes Sponsorship Opportunities
+Achievement Sharing Team Collaboration
+Research, UI/UX Design, Mobile App, and Web App
+Dorian Flowers, USA
+2021
+https://www.figma.com/proto/uzr1m4wl3jyHhy8Koc5gTv/offszn?node-id=103%3A2074&scaling=scale-down&page-id=103%3A815
+
+=== PDF page 9 ===
+PORTFOLIO
+06/06
+Main feature list
+Gym Community
+Social platform designed to create a community of gym-goers
+through engagement in group discussions, sharing fitness
+achievements, staying connected through messaging.
+Finding Workout Partners
+Fitness Event Calendar Workout Routine Sharing Personalised Fitness Plans
+Live Chat Communication Physical Activity Sharing
+Research, UI/UX Design, Mobile App
+Matt Fisher, USA
+2022-2023
+https://marvelapp.com/prototype/9gbdf81/screen/62929832
+
+=== PDF page 10 ===
+PORTFOLIO
+
+=== PDF page 11 ===
+PORTFOLIO
+07/07
+Main feature list
+Non-Proﬁt Employment Agency
+Achēv is one of the largest providers of employment,
+settlement, language, women, youth and technology
+solutions services in the GTA throughout Canada.
+Application Process Events & Workshops News & Articles
+App-wide Search Location-Based Filters Personalised Feed
+Mobile & Web App Development
+Charles Curl, Achev
+2024
+https://www.figma.com/design/nXVBrDd8uP9PPVDnmRXjzM/Achev-APP-Doerz-Copy-as-of-November-19?node-id=0-1&t=3ulZePxqngjMuTeJ-1
+
+=== PDF page 12 ===
+PORTFOLIO
+
+=== PDF page 13 ===
+PORTFOLIO
+08/08
+Main feature list
+Appointment Scheduling
+This is designed for appointment scheduling and
+management, primarily focused on businesses in
+the health and beauty industry.
+Appointment Scheduling Booking & Management Service Provider Profiles
+In-App Messaging Reviews and Ratings Payment Integration
+Research, UI/UX Design, Mobile App, Web App
+Stylios, Cyprus
+2023
+https://www.figma.com/file/l6w495rMRsnwHmKicLkUVP/BookCyp?type=design&node-id=480-9062&mode=design&t=GrFtcv76qI7NIbfp-0
+
+=== PDF page 14 ===
+PORTFOLIO
+
+=== PDF page 15 ===
+PORTFOLIO
+09/09
+Main feature list
+Healthcare Community
+Comprehensive platform designed to help navigat
+the fertility journey with a community-centric space
+where users can connect, share experiences, and
+access resources.
+Profile Management
+Chat & Forums
+Complete Admin CMS
+Reports & Suspensions Feedback & Analytics
+Information Hub
+Research, UI/UX Design, Web+Mobile App
+Racheal
+2024
+https://www.figma.com/design/yGYiGuks0BEwiwAZErOzJS/Fertility-Connects-Web?node-id=1152-1890&t=eBjlkf25aKFSsPoO-0
+
+=== PDF page 16 ===
+PORTFOLIO
+10/10
+Main feature list
+Patient & Doctor Connection
+A platform for health workers and patients to connect
+through video calls, book appointments online, search
+for doctors, send and receive payments.
+Video Calling
+Health Records Prescription Requests Payment Integration
+Appointment Booking Doctor Search & Forums Patient Profiles
+Research, UI/UX Design, Web App, Mobile App
+Muhammad Naeem
+2020
+https://xd.adobe.com/spec/2300eb7d-ac62-447c-49bd-459f66ed7f18-5531/specs/
+
+=== PDF page 17 ===
+PORTFOLIO
+
+=== PDF page 18 ===
+PORTFOLIO
+11/11
+Main feature list
+Family Safety/Location Tracking
+CircleGeo is a comprehensive family safety and location-
+tracking app designed to provide peace of mind to parents
+and caregivers.
+Real-Time Location Tracking
+Bluetooth Car Detection In-App Family Chat Live Driving Tracking Customizable Geofencing Zones
+Geofencing Capabilities Emergency SOS Functionality
+Research, UI/UX Design, Mobile App
+Gabriel Obassi, UK
+2023-2024
+https://www.figma.com/file/e3s4k451Zx78bm4KB2Lsm8/Gabrielobasi-UIUX---Doerz-Copy?type=design&node-id=0-1&mode=design&t=GrFtcv76qI7NIbfp-0
+
+=== PDF page 19 ===
+PORTFOLIO
+
+=== PDF page 20 ===
+PORTFOLIO
+12/12
+Main feature list
+Social Networking
+MvM connects media influencers and like-minded
+people; allows users to find an influencer from a
+diverse range of interests, and communicate.
+Connecting Media Influencers
+Finding Influencers by Interests Influencer Recommendations Trending Topics and Challenges
+Live Chat Communication Interest-Based Feeds
+Research, UI/UX Design, Mobile App
+Spenser Benson, USA
+2022
+https://www.figma.com/design/CXorEIF5Fi0zIC37avBJ7J/Man-v-Media-Redesign?t=2v1NIvdtOnwLHuA9-0
+
+=== PDF page 21 ===
+PORTFOLIO
+13/13
+Main feature list
+Horse Riding Community
+Whinny is a platform that helps users connect with the horse
+community and manage their tasks related to horse care.
+Horse Community Connection
+Messaging with Owners Horse Health Records Community Forums
+Horse Care Task Management Event Calendar
+Research, UI/UX Design, Mobile App, and Web App
+Raul Blanco, Sweden
+2023
+https://www.figma.com/design/brfiS9MH3e8ZauCUMNkbV4/Whinny-Design-v2?node-id=5219-3676&t=ICfFNgdp824l2UJF-0
+
+=== PDF page 22 ===
+PORTFOLIO
+
+=== PDF page 23 ===
+PORTFOLIO
+14/14
+Main feature list
+Clothing Design Feedback
+Fitty is an e-commerce app that allows clothing
+designers to get feedback from consumers before
+they start manufacturing their designs.
+Validation from Consumers
+Design Preview/Prototyping Pre-Order & Crowdfunding Options
+Designer Profiles
+Sales Analytics
+Feedback/Commenting
+Research, UI/UX Design, Mobile App, Web App
+Pierce Maloney, USA
+2021
+https://marvelapp.com/prototype/b3fgee8/screen/71452330
+
+=== PDF page 24 ===
+PORTFOLIO
+Main feature list
+Food Truck Discovery
+Food Trucking is your gateway to a mobile culinary
+adventure, seamlessly connecting foodies with the
+vibrant world of food trucks.
+Discover & Menu Exploration
+Foodie Recommendations Event Participation Truck Operator Dashboard
+Ordering & Payment Truck Ratings/Reviews
+Research, UI/UX Design, Mobile App
+Dorian Flowers, USA
+2021
+15/15
+https://www.figma.com/proto/5GfyVELVssAblSNhbXLSEU/Food-Truckin---v3?node-id=202%3A18&scaling=scale-down&page-id=202%3A2&starting-point-node-id=202%3A18
+
+=== PDF page 25 ===
+PORTFOLIO
+
+=== PDF page 26 ===
+PORTFOLIO
+17/17
+Main feature list
+Communication & Employee Management
+An all-in-one mobile app designed to help businesses
+specifically security companies to manage their
+workforce efficiently.
+Employee Directory
+Forms, Submission, Tracking Recognition & Rewards Company Newsfeed
+Job Scheduling Real-time Reporting Document Management
+Task Assignments Shift Management Time Clock
+Research, UI/UX Design, Mobile App and Web App
+Tony Johnson, USA
+2024
+https://www.figma.com/design/nPUpSDkYfqAliyzefBQemz/VistaTech?node-id=1081-16828&t=eBjlkf25aKFSsPoO-0
+
+=== PDF page 27 ===
+PORTFOLIO
+Main feature list
+Events + Restaurant Management
+A platform for seamless event and restaurant
+management, bookings, and ticketing through discovery,
+posting & managing events.
+Booking and Ticketing
+Organizer Dashboard Attendee Dashboard Event Promotion Tools
+Event Discovery Restaurant Discovery/Reviews
+Research, UI/UX Design, Mobile App, and Web App
+Andrea Charles, Switzerland
+2022-2023
+18/18
+https://www.figma.com/file/i76VtEeChfMvtBwtazs18n/WESPR-Design-App?node-id=120-524&t=4HF7KYFCYd1sf4wz-0
+
+=== PDF page 28 ===
+PORTFOLIO
+19/19
+Main feature list
+Streamlining Property Management
+Property management app designed to streamline and
+optimize the coordination of property-related tasks.
+Specialised Roles for Staff
+Supplier Management
+Document Management
+Tenant Communication Financial Tracking/Reporting
+Property Listings and Details Maintenance Requests
+Research, UI/UX Design
+Dorian Flowers, USA
+2021
+https://www.figma.com/proto/uk9rByOGPbDdv1E997u744/Recsy?node-id=167%3A5165&scaling=scale-down&page-id=0%3A1&starting-point-node-id=167%3A3948
+
+=== PDF page 29 ===
+PORTFOLIO
+
+=== PDF page 30 ===
+PORTFOLIO
+20/20
+Main feature list
+Lawyer-Client Connection
+Platform designed for legal professionals, transforming
+how lawyers connect with clients through a bidding system
+showcasing their expertise and availability to clients.
+Bidding System
+Document Management Appointment Scheduling
+Lawyer & Client Profiles Case Listings Bid Submissions
+Research, UI/UX Design, Web App
+Dorian Flowers, USA
+2021
+https://www.figma.com/proto/mpDqs2BGgj7zQnXlv6SQRF/LegalMe?node-id=100%3A440&starting-point-node-id=100%3A440&scaling=scale-down
+
+=== PDF page 31 ===
+PORTFOLIO
+Main feature list
+Connecting Candidates to Agencies
+Leaping hurdles connects candidates to agencies to
+find jobs, apply, and get hired. Agencies can post jobs,
+filter relevant candidates, and connect to each other.
+Connecting Candidates to Agencies
+Application Tracking System Job Matching Algorithms Interview Scheduling
+Job Listings and Filters Candidate Profiles
+Research, UI/UX Design
+Dorian Flowers, USA
+2021
+21/21
+https://www.figma.com/proto/ThgEOI1XgoEdf7siGSSgQM/Business-dashboard?scaling=scale-down&page-id=0%3A1&node-id=1%3A2
+
+=== PDF page 32 ===
+PORTFOLIO
+22/22
+Main feature list
+Simplifying Education Application
+EdTech platform revolutionises the education application
+process by seamlessly connecting students, agents, and
+administrators in a cohesive digital ecosystem.
+Streamline Application Process
+Application Tracking System Document Submission Acceptance/Enrollment Process
+Connecting relevant people Course Listings and Details
+Research, UI/UX Design, Web App
+Asghar Khan (AK Consultants)
+2023
+https://www.figma.com/file/owy9xWILdh9EjBu1jiDBEh/%20Education-admin-flow?node-id=1409%3A55551&t=1lFrs1mHozzYPIl8-4
+
+=== PDF page 33 ===
+PORTFOLIO
+See our Case Study 
+Watch our Process 
+Get in touch with us :
+hey@doerz.tech
+https://doerz.tech/case-studies/
+https://drive.google.com/file/d/1c8m6prslWB8fjVFnieY1jj8dot2CdXAc/view
