@@ -189,6 +189,49 @@ body::after {
 .animate-float-slow { animation: float-slow 9s ease-in-out infinite; }
 .animate-marquee { animation: marquee 38s linear infinite; }
 
+/* ============================================================
+   MDX code blocks (rehype-pretty-code, keepBackground:false)
+   ============================================================ */
+[data-rehype-pretty-code-figure] pre {
+  overflow-x: auto;
+  border-radius: 1rem;
+  border: 1px solid var(--color-line);
+  background: #0a0810;
+  padding: 1.1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+[data-rehype-pretty-code-figure] [data-line] { padding: 0 0.25rem; }
+/* Mermaid diagrams (rendered client-side by MermaidRunner) */
+pre.mermaid {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-line);
+  background: color-mix(in oklab, var(--color-void) 50%, transparent);
+  overflow-x: auto;
+  text-align: center;
+}
+pre.mermaid:not([data-processed]) { color: transparent; font-size: 0; min-height: 6rem; }
+pre.mermaid svg { max-width: 100%; height: auto; margin: 0 auto; }
+[data-rehype-pretty-code-title] {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  margin-bottom: -0.4rem;
+}
+:not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: color-mix(in oklab, var(--color-violet) 14%, transparent);
+  border: 1px solid var(--color-line);
+  border-radius: 0.4rem;
+  padding: 0.1rem 0.35rem;
+  color: var(--color-text);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

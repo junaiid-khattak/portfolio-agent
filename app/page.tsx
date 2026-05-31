@@ -5,6 +5,7 @@ import { OldVsNew } from "@/components/OldVsNew";
 import { Origin } from "@/components/Origin";
 import { HowIWork } from "@/components/HowIWork";
 import { Proof } from "@/components/Proof";
+import { LatestWriting } from "@/components/LatestWriting";
 import { FreeValue } from "@/components/FreeValue";
 import { WhoIHelp } from "@/components/WhoIHelp";
 import { Availability } from "@/components/Availability";
@@ -22,6 +23,7 @@ export default function Home() {
         <Origin />
         <HowIWork />
         <Proof />
+        <LatestWriting />
         <FreeValue />
         <WhoIHelp />
         <Availability />

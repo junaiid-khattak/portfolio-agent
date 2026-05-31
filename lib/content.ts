@@ -16,10 +16,11 @@ export const site = {
 };
 
 export const nav = [
-  { label: "Proof", href: "#proof" },
-  { label: "How I work", href: "#how-i-work" },
-  { label: "Who I help", href: "#who-i-help" },
-  { label: "Book", href: "#book" },
+  { label: "Work", href: "/work" },
+  { label: "Writing", href: "/blog" },
+  { label: "Videos", href: "/videos" },
+  { label: "How I work", href: "/#how-i-work" },
+  { label: "Book", href: "/#book" },
 ];
 
 export const hero = {
@@ -84,16 +85,22 @@ export const proof = {
   heading: "I don't pitch. I point at what's already live.",
   products: [
     {
-      name: "Nayld",
-      tag: "Realtime AI voice-interview platform",
+      name: "Nayld Prep",
+      tag: "Realtime AI voice-interview practice",
       built: "Built solo in ~6 weeks",
       old: "vs ~8–10 months",
       metrics: ["257 users", "330+ interviews"],
-      detail: "Voice agents on OpenAI Realtime + WebRTC, async screening pipeline. Candidate + employer sides both live.",
-      links: [
-        { label: "nayld.ai", href: "https://nayld.ai" },
-        { label: "hire.nayld.ai", href: "https://hire.nayld.ai" },
-      ],
+      detail: "Mock interviews against a realtime voice agent on OpenAI Realtime + WebRTC, with structured feedback.",
+      links: [{ label: "nayld.ai", href: "https://nayld.ai" }],
+    },
+    {
+      name: "Nayld Hire",
+      tag: "AI resume screening + interviews",
+      built: "Built solo in ~6 weeks",
+      old: "vs ~8–10 months",
+      metrics: ["280+ resumes parsed", "Integrity scoring"],
+      detail: "Event-driven screening pipeline (S3 → Lambda → SQS → worker) plus tier-2 AI interviews with anti-cheat integrity scores.",
+      links: [{ label: "hire.nayld.ai", href: "https://hire.nayld.ai" }],
     },
     {
       name: "ClinicSynch",

@@ -1,7 +1,15 @@
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Container, Eyebrow, Section, Led } from "./ui";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 import { proof, site } from "@/lib/content";
+
+const CASE_STUDY_SLUG: Record<string, string> = {
+  "Nayld Prep": "nayld-prep",
+  "Nayld Hire": "nayld-hire",
+  ClinicSynch: "clinicsynch",
+  "PSX Intelligence": "psx",
+};
 
 export function Proof() {
   return (
@@ -57,6 +65,15 @@ export function Proof() {
                     </a>
                   ))}
                 </div>
+
+                {CASE_STUDY_SLUG[p.name] && (
+                  <Link
+                    href={`/case-studies/${CASE_STUDY_SLUG[p.name]}`}
+                    className="mt-4 inline-flex items-center gap-1 border-t border-line/60 pt-4 text-sm font-medium text-text transition-colors hover:text-gradient"
+                  >
+                    Read the technical case study <ArrowRight className="size-4" />
+                  </Link>
+                )}
               </div>
             </StaggerItem>
           ))}

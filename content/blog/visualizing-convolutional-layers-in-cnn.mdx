@@ -1,0 +1,46 @@
+---
+title: "Visualizing Convolutional Layers in CNNs"
+summary: "How a convolutional layer applies kernels to an image to produce feature maps — and a quick PyTorch + matplotlib trick to actually see those feature maps develop as the network trains."
+date: "2019-10-30"
+canonical: "https://medium.com/@junaid.khattak/visualizing-convolutional-layers-in-cnn-f35e6ce3bd56"
+tags: ["Deep Learning", "CNN", "PyTorch"]
+---
+
+In a convolutional network an image passes through a layer (or a set of layers) where a kernel is applied to each image, generating feature maps — which is kind of how the network "sees" your images.
+
+```python
+# pytorch
+self.convo1 = nn.Conv2d(in_channels=3,
+                        out_channels=12,
+                        stride=1,
+                        kernel_size=3,
+                        padding=1)
+```
+
+The snippet above shows a convolutional layer added as the first layer of a network in PyTorch. It takes in an RGB image and applies 12 kernels of size 3×3, generating 12 feature maps (one for each kernel). We use `in_channels=3` because an RGB image is a 3-dimensional array of m×n pixels (thinking in NumPy), one for each color. So a 128×128 image will have dimensions 3×128×128.
+
+Let's say an RGB image of 128×128 pixels is passed to this layer. After passing through it, 12 feature maps of size 128×128 will be generated, which can be drawn using matplotlib.
+
+## Visualizing CNN layers in PyTorch
+
+In PyTorch this can be done by adding something like the following to the `forward` method of your network class:
+
+```python
+x = self.convo1(x)
+x1 = x[0]  # select first image of the batch and draw its feature map
+x1 = x1.detach().numpy()
+fig = plt.figure(figsize=(20, 50))
+num_features = 12
+for i in range(num_features):
+    ax = fig.add_subplot(1, 12, i + 1)
+    ax.set_xticks([])
+    ax.set_yticks([])
+    plt.imshow(x1[i], cmap='gray')
+plt.show()
+```
+
+As training happens in batches, we're selecting the first image of each batch and visualizing its features. This will draw the first image of every batch across all epochs, so you can see how the features develop as you train the network.
+
+## Note
+
+This is a nice way of seeing feature maps develop, and this approach should only be used for understanding. Although it goes without saying — **do not use this in a real-world scenario.**

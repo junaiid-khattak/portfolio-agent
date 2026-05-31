@@ -1,0 +1,81 @@
+---
+title: "Deploying React Apps with Nginx"
+summary: "How to serve multiple React and Node apps from a single instance using Nginx as a reverse proxy — a practical deployment guide for teams running many concurrent projects."
+date: "2020-06-13"
+canonical: "https://medium.com/@junaid.khattak/deploying-react-apps-with-nginx-3b92d0044d80"
+tags: ["React", "Nginx", "Deployment", "Cloud"]
+---
+
+If your company is anything like mine — new, working on multiple projects or products at the same time, rapidly expanding — chances are you're constantly working on squeezing every last bit of utility out of all your resources, including your cloud. You usually don't have the luxury of using a different instance for each project.
+
+We have a tiny compute instance on GCP that we use for development, and to say it's over-utilized would be an understatement. It's currently running 5 different servers for different projects (Node and React). This is a dedicated dev instance hosting whatever is required: databases, app servers, and websites.
+
+The simplest way of deploying an application is to use whatever server is bundled with your framework. In many Node-based or React projects it can be as simple as running `npm start`, which is good enough for most dev use cases. We were doing the same, but with increasing load, our instance started misbehaving. I had a choice: scale the instance, create a new one, or do something else — and I decided to do something else.
+
+## Nginx to the rescue
+
+Nginx is a free, open-source web server that powers many of the most visited websites on the internet. It handles both static and dynamic content while functioning as a load balancer, HTTP cache, and reverse proxy. Its async, event-driven request-handling model makes it lightweight compared to traditional threaded approaches. A single Nginx instance can serve multiple applications simultaneously — precisely what was needed.
+
+## Steps
+
+**1. Install Nginx** (on Ubuntu and similar distributions):
+
+```bash
+sudo apt update
+sudo apt install nginx
+```
+
+**2. Build your app.** For React projects using create-react-app:
+
+```bash
+npm run build
+```
+
+**3. Create project directories** in `/var/www/`:
+
+```bash
+sudo mkdir /var/www/website1
+```
+
+**4. Move build files** from your project root:
+
+```bash
+sudo mv build/* /var/www/website1
+```
+
+**5. Configure Nginx** by copying the default configuration file:
+
+```bash
+sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/website1
+```
+
+**6. Set listening ports.** Edit the config file and locate the `listen` directives:
+
+```nginx
+listen 80;
+listen [::]:80;
+```
+
+Modify these to your desired port.
+
+**7. Specify the root directory.** Find the `root` line and update it:
+
+```nginx
+root /var/www/website1;
+```
+
+**8. Configure the index file.** The `index` directive should already include `index.html`:
+
+```nginx
+index index.html index.htm index.nginx-debian.html;
+```
+
+**9. Handle dynamic URLs.** Modify the `try_files` directive to support client-side routing:
+
+```nginx
+try_files $uri /index.html;
+```
+
+This redirects unmatched requests to your application's entry point, allowing your routing configuration to handle them.
+
+Repeat these steps for additional sites. Remember to update firewall settings in cloud environments to allow traffic on your configured ports.

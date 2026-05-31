@@ -1,0 +1,47 @@
+---
+title: "Custom Fonts in React Native"
+summary: "With the new CLI it's easier than ever to add custom fonts to your React Native app — a quick guide using react-native.config.js and react-native link."
+date: "2019-07-29"
+canonical: "https://medium.com/@junaid.khattak/custom-fonts-in-react-native-a1078e12d0c1"
+tags: ["React Native", "Mobile", "CLI"]
+---
+
+<Callout>
+This is a condensed mirror of the original. For the full piece, read it on Medium via the link at the top of this page.
+</Callout>
+
+With the new React Native CLI it's easier than ever to add custom fonts to your app. This guide uses React Native CLI 2.0.1 with React Native 0.60.0 — the recommended approach with the newer CLI version.
+
+## Steps
+
+**1. Add your font files** to a directory such as `./assets/fonts`.
+
+**2. Create a config file** named `react-native.config.js` at the project root.
+
+**3. Add this configuration:**
+
+```js
+module.exports = {
+  project: {
+    ios: {},
+    android: {},
+  },
+  assets: ['./assets/fonts/'],
+};
+```
+
+**4. Link the assets:**
+
+```bash
+react-native link
+```
+
+**5. Apply the font** using the `fontFamily` property in your styles, for example:
+
+```js
+fontFamily: 'SF-Pro-Display-Bold'
+```
+
+## One note
+
+After linking, restart the application by running either `react-native run-android` or `react-native run-ios`. I've personally tested this method and it works.

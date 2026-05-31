@@ -1,0 +1,43 @@
+---
+title: "ECS — A Definitive Guide (I)"
+summary: "A dead-simple, step-by-step introduction to running workloads on AWS ECS — starting with the fundamentals of ECS, Fargate, and task definitions."
+date: "2023-10-31"
+canonical: "https://medium.com/@junaid.khattak/ecs-a-definitive-guide-i-0ac644abe654"
+tags: ["AWS", "ECS", "Fargate", "DevOps"]
+---
+
+If you are planning on running a workload on AWS ECS, here is a dead-simple step-by-step guide to follow — but first let's understand it. In this first chapter we'll talk about the basics of ECS and Tasks.
+
+## What even is ECS?
+
+ECS (Elastic Container Service), as the name suggests, is a service for running containers on AWS. If you don't know about containers, I strongly recommend reading up on that first. A container is essentially an execution environment with its own OS, CPU, and memory — like a tiny VM. ECS allows you to run your containers on AWS without you having to manage any infrastructure at all.
+
+There are primarily two ways to run containers on AWS: via EC2 and via Fargate. We'll focus on Fargate here.
+
+## What's the deal with Fargate?
+
+Glad you asked. The traditional way of running applications on the cloud has been to procure a VM, configure it to your needs, install your application, manage your application and web server, and a lot more. Then came serverless in the form of AWS Lambda, Google Cloud Functions, Azure Functions, and more. The idea is simple: cloud providers ask you to just give them your code, and they will run it for you (as long as you're paying). Fargate applies the same idea to containers.
+
+## Tasks and task definitions
+
+A task is how you define a blueprint of your application. You define the containers and the environment they will run in. Each task definition consists of the following:
+
+### a. Infrastructure
+
+Your task needs compute (CPU, memory) to run. This is where you define the environment your containers will run in. The most important parameter is the **Launch Type**, which specifies where your task will run. You have two options: EC2 and Fargate. We'll go with Fargate here.
+
+### b. Containers
+
+You defined your compute in the last stage; now you define what you'll run on all that compute.
+
+### c. Storage
+
+It's exactly what it says — allocate the number of GBs you want AWS to allocate to your container.
+
+### d. Monitoring
+
+If you want to do trace collection or metric collection.
+
+---
+
+In the next chapter we'll talk about clusters and services, and dive into a step-by-step guide of how to deploy an application to ECS.
