@@ -2,8 +2,9 @@
   "name": "junaidkhattak-site",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.16.1",
   "engines": {
-    "node": "20.x"
+    "node": "22"
   },
   "scripts": {
     "dev": "next dev",
