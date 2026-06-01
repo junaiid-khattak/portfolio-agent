@@ -25,7 +25,7 @@ export async function POST(req: Request) {
   if (clean.length === 0) return NextResponse.json({ fallback: true }, { status: 400 });
 
   const now = new Date();
-  const dateContext = `\n\n# Current date — use this as "today" for ALL scheduling; never guess the date or year\nRight now it is ${now.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })} (${now.toISOString().slice(0, 10)} UTC). Compute "today", "tomorrow", "this week", and "next week" relative to this date.`;
+  const dateContext = `\n\n# Current date, use this as "today" for ALL scheduling; never guess the date or year\nRight now it is ${now.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })} (${now.toISOString().slice(0, 10)} UTC). Compute "today", "tomorrow", "this week", and "next week" relative to this date.`;
 
   const result = streamText({
     model: anthropic(TWIN_MODEL),
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     tools: {
       search_knowledge: tool({
         description:
-          "Search Junaid's knowledge base for specific facts about his background — his Doerz/agency projects (40+ platforms across fitness, healthcare, legal, e-commerce, property, edtech, safety, etc.), work history, education, his live products, his writing/articles, and how he works. Call this whenever the visitor asks anything specific about his experience or projects that you're not 100% certain of. Prefer searching over guessing; never invent projects or facts.",
+          "Search Junaid's knowledge base for specific facts about his background, his Doerz/agency projects (40+ platforms across fitness, healthcare, legal, e-commerce, property, edtech, safety, etc.), work history, education, his live products, his writing/articles, and how he works. Call this whenever the visitor asks anything specific about his experience or projects that you're not 100% certain of. Prefer searching over guessing; never invent projects or facts.",
         inputSchema: z.object({
           query: z.string().describe("what to look up, e.g. 'healthcare projects at Doerz' or 'education' or 'gym apps'"),
         }),
@@ -63,7 +63,7 @@ export async function POST(req: Request) {
         inputSchema: z.object({
           fromDate: z.string().optional().describe("YYYY-MM-DD start (default: today)"),
           toDate: z.string().optional().describe("YYYY-MM-DD end (default: +14 days)"),
-          timeZone: z.string().optional().describe("visitor's IANA timezone — ask/confirm it first so slots show in their time, e.g. America/New_York"),
+          timeZone: z.string().optional().describe("visitor's IANA timezone, ask/confirm it first so slots show in their time, e.g. America/New_York"),
         }),
         execute: async ({ fromDate, toDate, timeZone }) => getAvailability(fromDate, toDate, timeZone),
       }),
@@ -74,7 +74,7 @@ export async function POST(req: Request) {
           name: z.string(),
           email: z.string(),
           startISO: z.string().describe("exact slot start (ISO 8601) returned by get_availability"),
-          timeZone: z.string().describe("visitor's CONFIRMED IANA timezone, e.g. America/New_York — you must confirm this with them before booking"),
+          timeZone: z.string().describe("visitor's CONFIRMED IANA timezone, e.g. America/New_York, you must confirm this with them before booking"),
           notes: z.string().optional().describe("what they're building / context for the call"),
         }),
         execute: async (args) => {

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const docs = await listDocs("case-studies");
   const m = docs.find((d) => d.slug === slug);
-  return { title: m ? `${m.title} — Case study · Junaid Khattak` : "Case study", description: m?.summary };
+  return { title: m ? `${m.title} · Case study · Junaid Khattak` : "Case study", description: m?.summary };
 }
 
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -71,7 +71,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <MermaidRunner />
 
           <div className="mt-14 glass rounded-2xl p-6">
-            <p className="text-text-muted">Want something like this built — fast?</p>
+            <p className="text-text-muted">Want something like this built, fast?</p>
             <Link href="/#book" className="btn-glow mt-4 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm">Book a call →</Link>
           </div>
         </Container>

@@ -25,7 +25,7 @@ export function Proof() {
         </Reveal>
 
         {/* live products */}
-        <Stagger className="mt-12 grid gap-4 md:grid-cols-3">
+        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2">
           {proof.products.map((p) => (
             <StaggerItem key={p.name}>
               <div className="glass glass-hover flex h-full flex-col rounded-2xl p-6">

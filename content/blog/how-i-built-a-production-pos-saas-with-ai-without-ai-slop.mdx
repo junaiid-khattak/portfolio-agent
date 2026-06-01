@@ -1,6 +1,6 @@
 ---
 title: "How I Built a Production POS SaaS with AI Without Creating AI Slop"
-summary: "Lessons from building a point-of-sale SaaS in ~two weeks using AI-first principles — while keeping production quality and avoiding bloated, inconsistent 'AI slop'."
+summary: "Lessons from building a point-of-sale SaaS in ~two weeks using AI-first principles, while keeping production quality and avoiding bloated, inconsistent 'AI slop'."
 date: "2026-01-18"
 canonical: "https://medium.com/@junaid.khattak/how-i-built-a-production-pos-saas-with-ai-without-creating-ai-slop-8eace7556d33"
 tags: ["AI", "Software Engineering", "SaaS", "Workflow"]
@@ -10,15 +10,15 @@ tags: ["AI", "Software Engineering", "SaaS", "Workflow"]
 This is a condensed mirror of the original. For the full piece, read it on Medium via the link at the top of this page.
 </Callout>
 
-I built a functional point-of-sale SaaS in about two weeks using AI strategically — while avoiding what I call "AI slop": code that looks impressive but is full of bloated logic and inconsistent patterns. Here's how I kept the speed without sacrificing production quality.
+I built a functional point-of-sale SaaS in about two weeks using AI strategically, while avoiding what I call "AI slop": code that looks impressive but is full of bloated logic and inconsistent patterns. Here's how I kept the speed without sacrificing production quality.
 
 ## AI as associate, not architect
 
-You stay in control by deciding system architecture and boundaries. The model fills in the work inside those boundaries — it doesn't get to invent the structure. Strong engineers guide tools. They don't follow them.
+You stay in control by deciding system architecture and boundaries. The model fills in the work inside those boundaries, it doesn't get to invent the structure. Strong engineers guide tools. They don't follow them.
 
 ## Small, focused prompts
 
-Instead of asking AI to "build the platform," I broke the work into scoped tasks: the inventory schema, role-based access, transaction flows. Small, bounded prompts produce code you can actually read, understand, and maintain — and they're far easier to review.
+Instead of asking AI to "build the platform," I broke the work into scoped tasks: the inventory schema, role-based access, transaction flows. Small, bounded prompts produce code you can actually read, understand, and maintain, and they're far easier to review.
 
 ## The right tool for the job
 
@@ -26,11 +26,11 @@ Different tools excel at different things. I reach for ChatGPT for reasoning, v0
 
 ## Ownership matters
 
-You have to review every line of AI-generated code and catch the edge cases the model misses. In the POS build, the checkout flow's payment-failure handling was exactly the kind of edge case that needs a human owner — the model won't catch it for you.
+You have to review every line of AI-generated code and catch the edge cases the model misses. In the POS build, the checkout flow's payment-failure handling was exactly the kind of edge case that needs a human owner, the model won't catch it for you.
 
 ## Enforce consistency
 
-Set explicit standards up front — naming conventions, file structure, recurring patterns. Without them, a multi-agent workflow descends into chaos. With them, everything the AI produces slots into a coherent codebase.
+Set explicit standards up front, naming conventions, file structure, recurring patterns. Without them, a multi-agent workflow descends into chaos. With them, everything the AI produces slots into a coherent codebase.
 
 ## Process discipline
 
@@ -38,4 +38,4 @@ Treat AI changes like peer code review: branches, commits, diffs. That disciplin
 
 ## The takeaway
 
-Leverage AI's capabilities, but keep your engineering judgment and accountability. The speed is real — the slop is optional.
+Leverage AI's capabilities, but keep your engineering judgment and accountability. The speed is real, the slop is optional.

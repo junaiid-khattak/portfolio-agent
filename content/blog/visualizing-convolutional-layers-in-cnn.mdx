@@ -1,12 +1,12 @@
 ---
 title: "Visualizing Convolutional Layers in CNNs"
-summary: "How a convolutional layer applies kernels to an image to produce feature maps — and a quick PyTorch + matplotlib trick to actually see those feature maps develop as the network trains."
+summary: "How a convolutional layer applies kernels to an image to produce feature maps, and a quick PyTorch + matplotlib trick to actually see those feature maps develop as the network trains."
 date: "2019-10-30"
 canonical: "https://medium.com/@junaid.khattak/visualizing-convolutional-layers-in-cnn-f35e6ce3bd56"
 tags: ["Deep Learning", "CNN", "PyTorch"]
 ---
 
-In a convolutional network an image passes through a layer (or a set of layers) where a kernel is applied to each image, generating feature maps — which is kind of how the network "sees" your images.
+In a convolutional network an image passes through a layer (or a set of layers) where a kernel is applied to each image, generating feature maps, which is kind of how the network "sees" your images.
 
 ```python
 # pytorch
@@ -43,4 +43,4 @@ As training happens in batches, we're selecting the first image of each batch an
 
 ## Note
 
-This is a nice way of seeing feature maps develop, and this approach should only be used for understanding. Although it goes without saying — **do not use this in a real-world scenario.**
+This is a nice way of seeing feature maps develop, and this approach should only be used for understanding. Although it goes without saying, **do not use this in a real-world scenario.**

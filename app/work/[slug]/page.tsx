@@ -16,8 +16,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const p = getDoerzProject(slug);
-  if (!p) return { title: "Project — Junaid Khattak" };
-  return { title: `${p.name} — Doerz project · Junaid Khattak`, description: p.summary };
+  if (!p) return { title: "Project · Junaid Khattak" };
+  return { title: `${p.name} · Doerz project · Junaid Khattak`, description: p.summary };
 }
 
 export default async function DoerzProjectPage({ params }: { params: Promise<{ slug: string }> }) {

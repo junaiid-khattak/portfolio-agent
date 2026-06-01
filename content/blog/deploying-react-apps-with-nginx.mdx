@@ -1,20 +1,20 @@
 ---
 title: "Deploying React Apps with Nginx"
-summary: "How to serve multiple React and Node apps from a single instance using Nginx as a reverse proxy — a practical deployment guide for teams running many concurrent projects."
+summary: "How to serve multiple React and Node apps from a single instance using Nginx as a reverse proxy, a practical deployment guide for teams running many concurrent projects."
 date: "2020-06-13"
 canonical: "https://medium.com/@junaid.khattak/deploying-react-apps-with-nginx-3b92d0044d80"
 tags: ["React", "Nginx", "Deployment", "Cloud"]
 ---
 
-If your company is anything like mine — new, working on multiple projects or products at the same time, rapidly expanding — chances are you're constantly working on squeezing every last bit of utility out of all your resources, including your cloud. You usually don't have the luxury of using a different instance for each project.
+If your company is anything like mine, new, working on multiple projects or products at the same time, rapidly expanding, chances are you're constantly working on squeezing every last bit of utility out of all your resources, including your cloud. You usually don't have the luxury of using a different instance for each project.
 
 We have a tiny compute instance on GCP that we use for development, and to say it's over-utilized would be an understatement. It's currently running 5 different servers for different projects (Node and React). This is a dedicated dev instance hosting whatever is required: databases, app servers, and websites.
 
-The simplest way of deploying an application is to use whatever server is bundled with your framework. In many Node-based or React projects it can be as simple as running `npm start`, which is good enough for most dev use cases. We were doing the same, but with increasing load, our instance started misbehaving. I had a choice: scale the instance, create a new one, or do something else — and I decided to do something else.
+The simplest way of deploying an application is to use whatever server is bundled with your framework. In many Node-based or React projects it can be as simple as running `npm start`, which is good enough for most dev use cases. We were doing the same, but with increasing load, our instance started misbehaving. I had a choice: scale the instance, create a new one, or do something else, and I decided to do something else.
 
 ## Nginx to the rescue
 
-Nginx is a free, open-source web server that powers many of the most visited websites on the internet. It handles both static and dynamic content while functioning as a load balancer, HTTP cache, and reverse proxy. Its async, event-driven request-handling model makes it lightweight compared to traditional threaded approaches. A single Nginx instance can serve multiple applications simultaneously — precisely what was needed.
+Nginx is a free, open-source web server that powers many of the most visited websites on the internet. It handles both static and dynamic content while functioning as a load balancer, HTTP cache, and reverse proxy. Its async, event-driven request-handling model makes it lightweight compared to traditional threaded approaches. A single Nginx instance can serve multiple applications simultaneously, precisely what was needed.
 
 ## Steps
 

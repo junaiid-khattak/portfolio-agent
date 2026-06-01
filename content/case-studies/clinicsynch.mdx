@@ -1,5 +1,5 @@
 ---
-title: "ClinicSynch — a multi-tenant healthcare SaaS with an autonomous SEO agent"
+title: "ClinicSynch: a multi-tenant healthcare SaaS with an autonomous SEO agent"
 product: "ClinicSynch"
 summary: "Get a clinic online in a day: booking, patient records, WhatsApp automation, and an autonomous agent that does each clinic's SEO inside hard guardrails. Built solo in ~4 weeks."
 date: "2026-01-20"
@@ -9,16 +9,16 @@ metrics: ["9 clinics onboarded", "3-app monorepo", "Autonomous SEO agent", "What
 
 ## The problem
 
-Small clinics want to be online and bookable without hiring an agency. ClinicSynch gets a clinic live in a day — a public mini-site, a booking link, patient records in one place, automated WhatsApp follow-ups — and then quietly grows their search presence with an autonomous agent. Built solo in ~4 weeks (a 4–6 month job the old way).
+Small clinics want to be online and bookable without hiring an agency. ClinicSynch gets a clinic live in a day: a public mini-site, a booking link, patient records in one place, automated WhatsApp follow-ups, and then it quietly grows their search presence with an autonomous agent. Built solo in ~4 weeks (a 4-6 month job the old way).
 
-## Architecture — multi-tenant by construction
+## Architecture: multi-tenant by construction
 
 ```mermaid
 flowchart TD
   subgraph Apps["3-app Next.js monorepo"]
-    CL["apps/clinics — dashboard + mini-sites"]
-    PT["apps/patients — cross-clinic portal"]
-    AD["apps/admin — internal ops"]
+    CL["apps/clinics: dashboard + mini-sites"]
+    PT["apps/patients: cross-clinic portal"]
+    AD["apps/admin: internal ops"]
   end
   FS[(Firestore)]
   CL --> FS
@@ -27,11 +27,11 @@ flowchart TD
   FS -. "every read/write scoped by clinicId, enforced in security rules" .- CL
 ```
 
-Tenant isolation is enforced at the **Firestore level** — every read/write is scoped by `clinicId` in security rules, never trusted to client logic. Shared packages (`@clinicsync/firebase`, `@clinicsync/ui`, `@clinicsync/messaging`) keep the three apps consistent.
+Tenant isolation is enforced at the **Firestore level**: every read/write is scoped by `clinicId` in security rules, never trusted to client logic. Shared packages (`@clinicsync/firebase`, `@clinicsync/ui`, `@clinicsync/messaging`) keep the three apps consistent.
 
 ## The autonomous SEO agent ("Pulse")
 
-This is the differentiator: each clinic gets an agent that researches keywords, optimizes pages, generates content, and watches Search Console — **autonomously, but inside hard guardrails** (this is YMYL healthcare content on a shared domain, so safety matters).
+This is the differentiator: each clinic gets an agent that researches keywords, optimizes pages, generates content, and watches Search Console, **autonomously but inside hard guardrails** (this is YMYL healthcare content on a shared domain, so safety matters).
 
 ```mermaid
 flowchart LR
@@ -40,7 +40,7 @@ flowchart LR
   ORCH --> CG["Content gen sub-agent"]
   ORCH --> SC["Search Console monitor"]
   subgraph Guardrails
-    CE["Constraint engine — per-clinic budget"]
+    CE["Constraint engine: per-clinic budget"]
     QG["Quality / uniqueness gate"]
     LED["Versioned action ledger"]
     KILL{{Global kill-switch}}
@@ -50,18 +50,18 @@ flowchart LR
   CE --> KILL
 ```
 
-- **Orchestrator + ephemeral specialist sub-agents** — each task gets a fresh sub-agent.
+- **Orchestrator + ephemeral specialist sub-agents:** each task gets a fresh sub-agent.
 - **Constraint engine** with hard per-clinic budgets, so the agent can't run away.
-- **Quality / uniqueness gate** before anything publishes (stay inside Google's scaled-content / YMYL policies on a shared domain).
-- **Versioned action ledger** — every action is recorded and reversible.
-- **Global kill-switch** — stop everything instantly.
+- **Quality / uniqueness gate** before anything publishes (to stay inside Google's scaled-content and YMYL policies on a shared domain).
+- **Versioned action ledger:** every action is recorded and reversible.
+- **Global kill-switch:** stop everything instantly.
 
 ## The clinic product
 
-- **Public mini-sites** — drag-and-drop builder, theme presets, SEO-optimized SSR, JSON-LD, sitemap/robots/`llms.txt`, served at `clinicsynch.com/{slug}`.
-- **Booking with double-book prevention** — server-side slot locking via an `appointmentSlots` subcollection, public + portal flows, doctor-specific conflict detection.
-- **Consultation workspace** — chief complaint, vitals, exam notes, diagnoses, meds, lab orders + results, referrals, autosave every 30s, printable summary.
-- **WhatsApp Cloud API** — appointment reminders, follow-ups, two-way messaging logged per clinic.
+- **Public mini-sites:** drag-and-drop builder, theme presets, SEO-optimized SSR, JSON-LD, sitemap/robots/`llms.txt`, served at `clinicsynch.com/{slug}`.
+- **Booking with double-book prevention:** server-side slot locking via an `appointmentSlots` subcollection, public + portal flows, doctor-specific conflict detection.
+- **Consultation workspace:** chief complaint, vitals, exam notes, diagnoses, meds, lab orders + results, referrals, autosave every 30s, printable summary.
+- **WhatsApp Cloud API:** appointment reminders, follow-ups, two-way messaging logged per clinic.
 - **Subscription tiers + paywall** with entitlement-gated features; **PWA** with offline fallback.
 
 ## Stack
@@ -70,4 +70,4 @@ Next.js 14 · TypeScript · Firebase (Auth, Firestore, Cloud Functions, Storage,
 
 ## Outcome
 
-Live and onboarding clinics (**9 so far**), with the autonomous SEO agent growing each clinic's presence hands-free — all built and operated solo.
+Live and onboarding clinics (**9 so far**), with the autonomous SEO agent growing each clinic's presence hands-free, all built and operated solo.

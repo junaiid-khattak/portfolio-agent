@@ -8,7 +8,7 @@ import { VideoGrid } from "@/components/VideoGrid";
 import { CHANNEL_URL, featuredVideos, getLatestVideos } from "@/lib/videos";
 
 export const metadata: Metadata = {
-  title: "Videos — Junaid Khattak",
+  title: "Videos · Junaid Khattak",
   description: "Talks, build logs, and walkthroughs on AI-native development and shipping products solo.",
 };
 
@@ -33,7 +33,7 @@ export default async function VideosPage() {
               Build logs, talks & walkthroughs.
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-text-muted">
-              How I think about AI-native development and shipping products solo — on video.
+              How I think about AI-native development and shipping products solo, on video.
             </p>
             <a
               href={CHANNEL_URL}

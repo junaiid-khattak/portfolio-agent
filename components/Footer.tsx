@@ -2,8 +2,8 @@ import { Container } from "./ui";
 import { site } from "@/lib/content";
 
 const products = [
-  { label: "Nayld", href: site.links.nayld },
-  { label: "hire.nayld.ai", href: site.links.nayldHire },
+  { label: "Nayld Prep", href: site.links.nayld },
+  { label: "Nayld Hire", href: site.links.nayldHire },
   { label: "ClinicSynch", href: site.links.clinicsynch },
   { label: "PSX Intelligence", href: site.links.psx },
 ];
@@ -28,7 +28,7 @@ export function Footer() {
               <span className="font-display font-semibold">Junaid Khattak</span>
             </div>
             <p className="mt-4 max-w-xs text-sm text-text-muted">
-              Ex-agency founder/CTO, now building production AI solo — in weeks, not months.
+              Ex-agency founder/CTO, now building production AI solo, in weeks, not months.
             </p>
             <a href={`mailto:${site.email}`} className="mt-4 inline-block text-sm text-cyan-bright hover:text-cyan">
               {site.email}

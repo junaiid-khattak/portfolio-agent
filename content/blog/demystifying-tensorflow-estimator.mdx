@@ -1,6 +1,6 @@
 ---
 title: "Demystifying TensorFlow Estimator"
-summary: "What TensorFlow's high-level Estimator API does, why you'd use it, and how to train a model with pre-made estimators — input functions, feature columns, and training."
+summary: "What TensorFlow's high-level Estimator API does, why you'd use it, and how to train a model with pre-made estimators, input functions, feature columns, and training."
 date: "2020-03-24"
 canonical: "https://medium.com/analytics-vidhya/demystifying-tensorflow-estimator-7113e7275606"
 tags: ["Machine Learning", "TensorFlow", "Python"]
@@ -12,11 +12,11 @@ TensorFlow is one of the most popular machine learning libraries out there. It's
 
 ## What is TensorFlow Estimator?
 
-Similar to Keras's Model API, TensorFlow Estimator is a **high-level** API that **encapsulates training, evaluation, prediction, and serving**. In other words, you don't have to write training, evaluation, or prediction loops — the estimator does it all for you. It also gives you a reusable model that you can save to or load from anywhere.
+Similar to Keras's Model API, TensorFlow Estimator is a **high-level** API that **encapsulates training, evaluation, prediction, and serving**. In other words, you don't have to write training, evaluation, or prediction loops, the estimator does it all for you. It also gives you a reusable model that you can save to or load from anywhere.
 
 ## Why use the Estimator API?
 
-Estimator is an easy-to-use API that handles a lot of complexity for you but still provides enough customization opportunities. You can design your model once and it will run seamlessly on your local machine — with or without GPUs — as well as on a multi-server distributed environment with GPUs and TPUs.
+Estimator is an easy-to-use API that handles a lot of complexity for you but still provides enough customization opportunities. You can design your model once and it will run seamlessly on your local machine, with or without GPUs, as well as on a multi-server distributed environment with GPUs and TPUs.
 
 It safely runs a distributed training loop that takes care of loading data, checkpoints, and writing summaries for TensorBoard.
 

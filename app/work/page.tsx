@@ -11,7 +11,7 @@ import { products } from "@/lib/products";
 import { doerzProjects } from "@/lib/doerz";
 
 export const metadata: Metadata = {
-  title: "Work — Junaid Khattak",
+  title: "Work · Junaid Khattak",
   description: "Live AI products built solo, plus 40+ platforms delivered at Doerz across fitness, healthcare, legal, e-commerce and more.",
 };
 
@@ -24,10 +24,10 @@ export default function WorkPage() {
           <Reveal>
             <Eyebrow>Work</Eyebrow>
             <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold tracking-tight sm:text-5xl">
-              What I&apos;ve built — and shipped.
+              What I&apos;ve built, and shipped.
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-text-muted">
-              Three live AI products built solo, with full technical case studies. Plus {doerzProjects.length}+ platforms
+              Live AI products built solo, each with a full technical case study. Plus {doerzProjects.length}+ platforms
               delivered at my agency, Doerz, across nine sectors.
             </p>
           </Reveal>
@@ -39,7 +39,7 @@ export default function WorkPage() {
             <h2 className="font-display text-2xl font-bold tracking-tight">Live AI products</h2>
             <p className="mt-2 text-text-muted">Each built solo. Read the deep technical case study.</p>
           </Reveal>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {products.map((p) => (
               <Link key={p.slug} href={`/case-studies/${p.slug}`} className="glass glass-hover group flex flex-col overflow-hidden rounded-2xl">
                 <div className="relative aspect-[16/10] overflow-hidden border-b border-line/70 bg-void">
@@ -64,9 +64,9 @@ export default function WorkPage() {
         {/* Doerz portfolio */}
         <Container className="mt-20 mb-24">
           <Reveal>
-            <h2 className="font-display text-2xl font-bold tracking-tight">Agency portfolio — Doerz</h2>
+            <h2 className="font-display text-2xl font-bold tracking-tight">Agency portfolio · Doerz</h2>
             <p className="mt-2 max-w-2xl text-text-muted">
-              A selection of the platforms I delivered as founder & CTO of Doerz — research, UI/UX, and full-stack mobile + web. Filter by sector.
+              A selection of the platforms I delivered as founder & CTO of Doerz: research, UI/UX, and full-stack mobile + web. Filter by sector.
             </p>
           </Reveal>
           <div className="mt-8">

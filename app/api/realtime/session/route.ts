@@ -20,7 +20,7 @@ export async function POST() {
           type: "realtime",
           model,
           instructions:
-            TWIN_SYSTEM + "\n\nYou are now on a live voice call — keep replies brief and conversational.",
+            TWIN_SYSTEM + "\n\nYou are now on a live voice call, keep replies brief and conversational.",
           audio: { output: { voice: "marin" } },
         },
       }),

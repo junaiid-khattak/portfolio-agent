@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const docs = await listDocs("blog");
   const m = docs.find((d) => d.slug === slug);
   return {
-    title: m ? `${m.title} — Junaid Khattak` : "Writing",
+    title: m ? `${m.title} · Junaid Khattak` : "Writing",
     description: m?.summary,
     alternates: m?.canonical ? { canonical: m.canonical } : undefined,
   };

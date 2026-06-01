@@ -2,20 +2,20 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { MessageSquare, X, Send, Mic, MicOff, CalendarClock, Loader2 } from "lucide-react";
+import { MessageSquare, X, Send, Mic, MicOff, CalendarClock, Loader2, ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { startVoice, type VoiceSession } from "@/lib/voice";
 
 type Msg = { role: "twin" | "user"; text: string };
 type Status = { live: boolean; voice: boolean };
 
-const GREETING = "Hey — I'm Junaid's digital twin. Tell me one thing you're trying to build.";
+const GREETING = "Hey, I'm Junaid's digital twin. Tell me one thing you're trying to build.";
 
 // Scripted fallback ladder (used when the live model isn't configured).
 const STEPS = [
   GREETING,
-  "Love it. Who's it for — you, your business, or a team you're hiring for?",
-  "Got it. What's blocking you right now — time, the tech, or just where to start?",
+  "Love it. Who's it for: you, your business, or a team you're hiring for?",
+  "Got it. What's blocking you right now: time, the tech, or just where to start?",
   "That's very doable. Drop your name + email and I'll have Junaid map out exactly how he'd build it.",
 ];
 
@@ -29,6 +29,7 @@ function newSessionId() {
 
 export function DigitalTwin() {
   const [open, setOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
   const [status, setStatus] = useState<Status | null>(null);
   const [messages, setMessages] = useState<Msg[]>([{ role: "twin", text: GREETING }]);
   const [input, setInput] = useState("");
@@ -44,7 +45,10 @@ export function DigitalTwin() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handler = () => setOpen(true);
+    const handler = () => {
+      setOpen(true);
+      setCollapsed(false);
+    };
     window.addEventListener("twin:open", handler);
     return () => window.removeEventListener("twin:open", handler);
   }, []);
@@ -61,7 +65,7 @@ export function DigitalTwin() {
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
-  }, [messages, open]);
+  }, [messages, open, collapsed]);
 
   const streamLive = useCallback(async (history: Msg[]) => {
     setBusy(true);
@@ -79,7 +83,7 @@ export function DigitalTwin() {
         return copy;
       });
     const FALLBACK =
-      "Sorry — I lost my train of thought there. Mind trying that again? Or grab a time below and I'll pick it up with you directly.";
+      "Sorry, I lost my train of thought there. Mind trying that again? Or grab a time below and I'll pick it up with you directly.";
 
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 60_000);
@@ -119,7 +123,7 @@ export function DigitalTwin() {
         setScriptDone(true);
         setMessages((m) => [
           ...m,
-          { role: "twin", text: "Perfect — got it. Want to grab a time on Junaid's calendar, or talk it through live?" },
+          { role: "twin", text: "Perfect, got it. Want to grab a time on Junaid's calendar, or talk it through live?" },
         ]);
         const userText = history.filter((h) => h.role === "user").map((h) => h.text);
         fetch("/api/lead", {
@@ -159,7 +163,7 @@ export function DigitalTwin() {
       setVoiceState("live");
     } catch {
       setVoiceState("off");
-      setMessages((m) => [...m, { role: "twin", text: "Couldn't start voice — mic permission or it's not configured yet. Let's keep chatting or book a call." }]);
+      setMessages((m) => [...m, { role: "twin", text: "Couldn't start voice. Mic permission, or it's not configured yet. Let's keep chatting or book a call." }]);
     }
   }
 
@@ -171,7 +175,12 @@ export function DigitalTwin() {
   return (
     <>
       <button
-        onClick={() => setOpen((o) => !o)}
+        onClick={() =>
+          setOpen((o) => {
+            if (!o) setCollapsed(false);
+            return !o;
+          })
+        }
         aria-label="Chat with my digital twin"
         className="btn-glow fixed bottom-5 right-5 z-[95] flex items-center gap-2 rounded-full px-5 py-3.5 text-sm shadow-lg"
       >
@@ -182,13 +191,25 @@ export function DigitalTwin() {
       <AnimatePresence>
         {open && (
           <motion.div
+            layout
             initial={{ opacity: 0, y: 24, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.98 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="glow-violet fixed bottom-24 right-5 z-[94] flex h-[34rem] w-[calc(100vw-2.5rem)] max-w-sm flex-col overflow-hidden rounded-3xl border border-line-bright bg-[#0d0b16] shadow-2xl"
+            className={cn(
+              "glow-violet fixed bottom-24 right-5 z-[94] flex w-[calc(100vw-2.5rem)] max-w-sm flex-col overflow-hidden rounded-3xl border border-line-bright bg-[#0d0b16] shadow-2xl",
+              collapsed ? "h-auto" : "h-[34rem]",
+            )}
           >
-            <div className="flex items-center gap-3 border-b border-line/70 px-5 py-4">
+            <button
+              type="button"
+              onClick={() => setCollapsed((c) => !c)}
+              aria-label={collapsed ? "Expand chat" : "Collapse chat"}
+              className={cn(
+                "flex w-full items-center gap-3 px-5 py-4 text-left",
+                !collapsed && "border-b border-line/70",
+              )}
+            >
               <span className="grid size-9 place-items-center rounded-full bg-gradient-to-br from-violet to-cyan font-display text-xs font-bold text-void">
                 JK
               </span>
@@ -199,8 +220,13 @@ export function DigitalTwin() {
                   {voiceState === "live" ? "on a voice call" : "online"}
                 </p>
               </div>
-            </div>
+              <span className="grid size-7 shrink-0 place-items-center rounded-full text-text-dim transition-colors hover:bg-line/40 hover:text-text">
+                {collapsed ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
+              </span>
+            </button>
 
+            {!collapsed && (
+              <>
             <div className="px-5 pt-3">
               <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-text-dim">
                 <span>Scoping your project</span>
@@ -253,6 +279,8 @@ export function DigitalTwin() {
                 {busy ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}
               </button>
             </div>
+              </>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { listDocs } from "@/lib/docs";
 
 export const metadata: Metadata = {
-  title: "Writing — Junaid Khattak",
+  title: "Writing · Junaid Khattak",
   description: "Essays and engineering notes on AI-native software development, ML, and shipping production software solo. Mirrored from Medium.",
 };
 
@@ -30,7 +30,7 @@ export default async function BlogPage() {
               Notes on building with AI.
             </h1>
             <p className="mt-5 text-lg text-text-muted">
-              Essays and engineering notes — from ML fundamentals to today's AI-native product building.
+              Essays and engineering notes, from ML fundamentals to today's AI-native product building.
               Mirrored here from{" "}
               <a href="https://medium.com/@junaid.khattak" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-cyan-bright hover:text-cyan">
                 Medium <ArrowUpRight className="size-3.5" />
