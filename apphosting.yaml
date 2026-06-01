@@ -1,0 +1,73 @@
+# Firebase App Hosting config — https://firebase.google.com/docs/app-hosting/configure
+#
+# Secrets first (one-time): create each in Cloud Secret Manager, e.g.
+#   firebase apphosting:secrets:set ANTHROPIC_API_KEY
+#   firebase apphosting:secrets:set OPENAI_API_KEY
+#   firebase apphosting:secrets:set SUPABASE_SERVICE_ROLE_KEY
+#   firebase apphosting:secrets:set CAL_API_KEY
+#   firebase apphosting:secrets:set NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+# Then fill the placeholder values below and deploy.
+
+runConfig:
+  # Keep one instance warm so the streaming chat agent has no cold-start lag.
+  minInstances: 1
+  maxInstances: 3
+  # Each request can hold a stream open up to ~60s; 80 concurrent is plenty.
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+
+env:
+  # --- Public client config (inlined into the bundle → must exist at BUILD) ---
+  - variable: NEXT_PUBLIC_SUPABASE_URL
+    value: "https://YOUR_PROJECT.supabase.co" # <-- fill in
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+    secret: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_CAL_LINK
+    value: "junaidkhattak/30min" # <-- your cal.com event link (enables the inline embed)
+    availability: [BUILD, RUNTIME]
+  - variable: YOUTUBE_CHANNEL_ID
+    value: "UCwgGAtdtyttNSnRqScqEHoA"
+    availability: [BUILD, RUNTIME]
+
+  # --- Server-side config (RUNTIME only) ---
+  - variable: SUPABASE_URL
+    value: "https://YOUR_PROJECT.supabase.co" # <-- same project URL
+    availability: [RUNTIME]
+  - variable: CAL_EVENT_TYPE_ID
+    value: "0" # <-- numeric cal.com event-type id used for booking
+    availability: [RUNTIME]
+  - variable: CAL_TIMEZONE
+    value: "Asia/Karachi"
+    availability: [RUNTIME]
+  - variable: TWIN_MODEL
+    value: "claude-sonnet-4-6"
+    availability: [RUNTIME]
+  - variable: ADMIN_EMAIL
+    value: "junaiid.khattak@gmail.com"
+    availability: [RUNTIME]
+  - variable: VOICE_ENABLED
+    value: "false" # launching chat-only; flip to "true" when the voice agent is ready
+    availability: [RUNTIME]
+
+  # --- Secrets (Cloud Secret Manager, RUNTIME only) ---
+  - variable: ANTHROPIC_API_KEY
+    secret: ANTHROPIC_API_KEY
+    availability: [RUNTIME]
+  - variable: OPENAI_API_KEY
+    secret: OPENAI_API_KEY
+    availability: [RUNTIME]
+  - variable: SUPABASE_SERVICE_ROLE_KEY
+    secret: SUPABASE_SERVICE_ROLE_KEY
+    availability: [RUNTIME]
+  - variable: CAL_API_KEY
+    secret: CAL_API_KEY
+    availability: [RUNTIME]
+
+  # Optional overrides (these have safe code defaults, add only to change them):
+  #   OPENAI_REALTIME_MODEL (default "gpt-realtime")
+  #   EMBEDDING_MODEL        (default "text-embedding-3-small")
+  #   CAL_BUILDING_FIELD     (default "What-are-you-trying-to-build")
+  #   NEXT_PUBLIC_BOOKING_URL (Google Calendar fallback if not using cal.com)
