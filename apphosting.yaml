@@ -26,7 +26,7 @@ env:
     secret: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
     availability: [BUILD, RUNTIME]
   - variable: NEXT_PUBLIC_CAL_LINK
-    value: "junaidkhattak/30min" # <-- your cal.com event link (enables the inline embed)
+    value: "junaid-khattak/ai-build-call" # username/event-slug only (embed builds the full cal.com URL)
     availability: [BUILD, RUNTIME]
   - variable: YOUTUBE_CHANNEL_ID
     value: "UCwgGAtdtyttNSnRqScqEHoA"
@@ -46,7 +46,7 @@ env:
     value: "claude-sonnet-4-6"
     availability: [RUNTIME]
   - variable: ADMIN_EMAIL
-    value: "junaiid.khattak@gmail.com"
+    value: "junaid@nayld.ai"
     availability: [RUNTIME]
   - variable: VOICE_ENABLED
     value: "false" # launching chat-only; flip to "true" when the voice agent is ready
@@ -70,4 +70,3 @@ env:
   #   OPENAI_REALTIME_MODEL (default "gpt-realtime")
   #   EMBEDDING_MODEL        (default "text-embedding-3-small")
   #   CAL_BUILDING_FIELD     (default "What-are-you-trying-to-build")
-  #   NEXT_PUBLIC_BOOKING_URL (Google Calendar fallback if not using cal.com)
