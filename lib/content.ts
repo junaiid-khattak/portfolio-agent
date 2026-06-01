@@ -16,22 +16,22 @@ export const site = {
 };
 
 export const nav = [
+  { label: "AI Agents", href: "/agents" },
   { label: "Work", href: "/work" },
   { label: "Writing", href: "/blog" },
   { label: "Videos", href: "/videos" },
   { label: "How I work", href: "/#how-i-work" },
-  { label: "Book", href: "/#book" },
 ];
 
 export const hero = {
-  eyebrow: "EX-AGENCY FOUNDER & CTO · NOW BUILDING AI, SOLO",
-  headlineLead: "My agency would've needed 8-10 months and a full team to build Nayld.",
-  headlinePunch: "I shipped it solo, end to end, in six weeks.",
+  eyebrow: "AGENTS · VOICE AI · AUTONOMOUS SYSTEMS",
+  headlineLead: "Give an AI agent the right tools and it'll automate almost any job in your business.",
+  headlinePunch: "I build those agents, and one's working on this page right now.",
   subhead:
-    "I'm Junaid. I founded and ran a 30-engineer software agency, so I know what a serious build really takes. Then AI changed what one person can ship. Now I build production AI (voice agents, autonomous agents, full-stack products) at a speed the old model can't match. If you're about to commission a big build, it's worth a conversation with me first.",
-  primaryCta: "Talk to my digital twin (free)",
-  secondaryCta: "Book a call",
-  trust: ["FOUNDED & SCALED AN AGENCY 2→30", "40+ PLATFORMS SHIPPED", "3 LIVE AI PRODUCTS", "100% JOB SUCCESS"],
+    "Booking, support, lead capture, research, back-office ops, voice calls. If it runs on software, an agent can run it. The one in the corner is mine. Talk to it, then let's build yours.",
+  primaryCta: "Talk to my agent",
+  secondaryCta: "See the agent offer",
+  trust: ["LIVE AI AGENTS & PRODUCTS", "EX-AGENCY FOUNDER/CTO · 40+ PLATFORMS", "100% JOB SUCCESS", "9+ YRS SHIPPING"],
 };
 
 export const honestMath = {
@@ -54,6 +54,17 @@ export const oldVsNew = {
   ],
   note: "What changes per build is the team-based overhead: discovery, specs, coordination, handoffs, QA loops. What stays is production quality, live in weeks.",
   line: "Same caliber of product, built a fundamentally faster, leaner way. And you get the upside: the speed and the savings, instead of an agency's margin.",
+};
+
+// "Why I can pull this off" — fuses the old origin + honestMath + oldVsNew into
+// one credibility section (the agency story, repurposed as support not the lead).
+export const background = {
+  eyebrow: "The background",
+  heading: "Agency-grade engineering. Solo-AI speed.",
+  lead: "I'm not a prompt-wrapper hobbyist. I founded and was CTO of a software agency, scaled it from 2 to 30 engineers, and delivered 40+ production platforms for mostly-US clients. I know exactly what serious software takes, and what it costs.",
+  shift: "Then AI changed what one person can ship, and I rebuilt my entire process around it. A build my old agency would've needed 8-10 months and a full team for, I shipped solo, end to end, in six weeks. Same engineering bar, a fraction of the time and cost.",
+  rowsCaption: "Not a one-off:",
+  thesis: "Team builds aren't slow because anyone's lazy; they carry real structural overhead like specs, handoffs, and QA loops. AI makes most of that optional, and you get the speed and the savings.",
 };
 
 export const origin = {
@@ -83,6 +94,7 @@ export const howIWork = {
 
 export const proof = {
   heading: "I don't pitch. I point at what's already live.",
+  lead: "Three live products, an autonomous agent running real clinics, realtime voice agents, and the one you're talking to right now. All built solo, all in production.",
   products: [
     {
       name: "Nayld Prep",
@@ -200,4 +212,78 @@ export const availability = {
   consultSlotsLeft: 6,
   buildSlotsOpen: 1,
   buildSlotsTotal: 3,
+};
+
+// Productized offer: custom public-facing AI agents for businesses.
+// NOTE: priceBuild/priceManaged are placeholders — confirm before publishing.
+export const agentsOffer = {
+  eyebrow: "Custom Intelligent Agents",
+  headline: "An AI agent that runs the work, not just the chat.",
+  sub: "Give an agent the right tools and it automates real work in your business: answering customers and booking 24/7, handling support, moving data between your systems, researching and monitoring, even taking phone calls. Customer-facing or behind the scenes.",
+  jobs: [
+    {
+      title: "Talks to customers & books, 24/7",
+      body: "Answers questions, qualifies and captures leads, and books or reschedules straight in your system. The after-hours visitor becomes a booking instead of a bounce.",
+    },
+    {
+      title: "Handles the repetitive busywork",
+      body: "Updates records, moves data between your tools, fills forms, drafts replies, clears the routine tickets, the clerical work that quietly eats your team's day.",
+    },
+    {
+      title: "Researches & monitors",
+      body: "Pulls and summarizes information on demand, watches for changes or new data, and sends the report or the alert, so no one has to babysit a dashboard.",
+    },
+    {
+      title: "Acts through your tools, escalates the rest",
+      body: "It doesn't just answer; it takes real actions via your tools' APIs, and routes anything it shouldn't handle to a human, cleanly.",
+    },
+  ],
+  channels: ["Website chat", "SMS / WhatsApp", "Voice", "Slack & email", "Behind the scenes"],
+  integrations: ["Cal.com / MindBody", "Your CRM", "Slack & email", "Sheets / databases", "Any REST API"],
+  steps: [
+    {
+      n: "01",
+      title: "Your knowledge + your tools",
+      body: "Your docs, data, and the systems you already run on become the agent's grounding and its hands.",
+    },
+    {
+      n: "02",
+      title: "A grounded, tool-using agent",
+      body: "RAG keeps it accurate to your real info; tools let it actually do the work, not just talk about it.",
+    },
+    {
+      n: "03",
+      title: "Live wherever the work happens",
+      body: "On your site, on the phone, in Slack, or quietly in your backend, monitored, with guardrails and a kill-switch.",
+    },
+  ],
+  proof:
+    "This isn't theory. The agent you can chat with on this very site is one of mine. I've also shipped realtime voice agents (Nayld) and an autonomous agent that runs SEO across live clinics end to end (ClinicSynch), the same agentic engine pointed at very different jobs.",
+  priceBuild: "from $2k build",
+  priceManaged: "from $500/mo managed",
+  priceNote: "Most focused agents go live in 1-2 weeks. One scoping call tells us exactly what yours should do.",
+  primaryCta: "Scope my agent (free)",
+  secondaryCta: "Book a call",
+  faqs: [
+    {
+      q: "What can it actually automate?",
+      a: "If a task runs on software, customer chat, scheduling, data entry, research, reporting, internal ops, an agent can usually do it. If a tool has an API or a usable interface, the agent can use it.",
+    },
+    {
+      q: "Does it actually take actions, or just chat?",
+      a: "It takes actions. Bookings, lookups, updates, and multi-step tasks run through your real systems via their APIs (MindBody, Cal.com, your CRM, Slack, your database, and more).",
+    },
+    {
+      q: "Will it make things up?",
+      a: "No. It's grounded in your real content (RAG) and constrained to it, with guardrails, so it works from your facts or hands off. It doesn't invent.",
+    },
+    {
+      q: "What do you need from me?",
+      a: "Access to the tools and info the agent will use, plus a clear picture of the job it should own. I handle the build, hosting, and monitoring.",
+    },
+    {
+      q: "How fast can it go live?",
+      a: "Typically 1-2 weeks for a focused agent, depending on how many tools it needs to touch.",
+    },
+  ],
 };

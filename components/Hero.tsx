@@ -1,4 +1,4 @@
-import { ArrowUpRight, MessageSquare } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 import { Container, Eyebrow, GhostButton } from "./ui";
 import { TwinTrigger } from "./TwinTrigger";
 import { Reveal } from "./Reveal";
@@ -35,9 +35,9 @@ export function Hero() {
               <MessageSquare className="size-4" />
               {hero.primaryCta}
             </TwinTrigger>
-            <GhostButton href="#book" className="px-7 py-3.5">
+            <GhostButton href="/agents" className="px-7 py-3.5">
               {hero.secondaryCta}
-              <ArrowUpRight className="size-4" />
+              <ArrowRight className="size-4" />
             </GhostButton>
           </div>
         </Reveal>

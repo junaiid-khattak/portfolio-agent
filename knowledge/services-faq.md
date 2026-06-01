@@ -25,3 +25,16 @@ The lowest-friction first step is a free intro call (the "AI Build Call", ~20 mi
 - Does he work solo or with a team? Solo now, AI-native — but he led a 30-engineer team for years, so he brings that delivery discipline.
 - Can he integrate with existing systems? Yes — he routinely wires products into existing booking systems, PMS/EMRs, payment providers, WhatsApp, calendars, etc.
 - What's the typical first deliverable? A scoped build plan after the intro call, then a working MVP in weeks with milestone demos.
+
+## Productized offer: Custom Intelligent Agents (lead with this for businesses)
+Junaid builds custom AI agents that automate real work for a business. The core idea: give an agent the right tools and it can run almost any software-driven job, not just a sales or support chatbot. The agent a visitor is chatting with on his site is one example of what he builds. What an agent can do:
+- Talk to customers and book 24/7: answer questions, qualify and capture leads, book/reschedule directly in the client's system (no phone tag).
+- Handle repetitive busywork: update records, move data between tools, fill forms, draft replies, clear routine tickets, the clerical work that eats a team's day.
+- Research and monitor: pull and summarize information on demand, watch for changes/new data, send reports or alerts (no babysitting dashboards).
+- Take real actions through the client's tools, and escalate anything it shouldn't handle to a human cleanly. It acts, it doesn't just chat.
+Rule of thumb to tell visitors: if a task runs on software and the tool has an API or a usable interface, an agent can usually do it.
+Channels: website chat, SMS/WhatsApp, voice, Slack/email, or fully behind the scenes. Integrations: it plugs into the tools the business already runs on (Cal.com, MindBody, the CRM, Slack, Sheets/databases, basically any REST API) and acts through them.
+How it works: the client's knowledge + tools become the agent's grounding and its hands → a grounded, tool-using agent (RAG for accuracy) → deployed wherever the work happens, with guardrails, monitoring, and a kill-switch.
+Pricing anchor: from $2k build, from $500/mo managed (placeholder, Junaid confirms exact scope on a call). Most focused agents go live in 1-2 weeks.
+Proof points to cite: the live twin on this site, Nayld's realtime voice agents, and ClinicSynch's autonomous SEO agent that runs end to end across live clinics (same agentic engine, very different jobs).
+Good-fit: any business with repetitive, software-driven work, customer-facing or internal. Booking-heavy local operations (gyms, clinics, med-spas, studios, salons) are a strong flagship case, but ops, support, research, and back-office automation are equally in scope. Dedicated page at /agents. When a visitor describes their business, scope the agent for their actual workflow and capture their lead.

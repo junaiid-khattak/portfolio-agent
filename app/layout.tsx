@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { DigitalTwin } from "@/components/DigitalTwin";
 
 const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
@@ -50,7 +51,10 @@ export default function RootLayout({
       lang="en"
       className={`${hanken.variable} ${jetbrains.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        {children}
+        <DigitalTwin />
+      </body>
     </html>
   );
 }

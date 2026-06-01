@@ -23,6 +23,9 @@ export function Proof() {
             {proof.heading}
           </h2>
         </Reveal>
+        <Reveal delay={0.08}>
+          <p className="mt-5 max-w-2xl text-lg text-text-muted">{proof.lead}</p>
+        </Reveal>
 
         {/* live products */}
         <Stagger className="mt-12 grid gap-4 sm:grid-cols-2">
